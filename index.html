@@ -740,7 +740,8 @@ footer {
 .hamburger { display: none; background: none; border: none; cursor: pointer; color: var(--text); font-size: 1.4rem; }
 @media (max-width: 900px) {
   .hero { grid-template-columns: 1fr; }
-  .hero-photo-wrap { display: none; }
+  .hero-photo-wrap { display: block; margin-top: 1.5rem; }
+  .hero-photo-placeholder { width: 160px; height: 160px; }
   .contact-inner { grid-template-columns: 1fr; gap: 2rem; }
   .nav-links { display: none; }
   .hamburger { display: block; }
@@ -962,6 +963,14 @@ body.zh [lang-zh].inline-flex { display: inline-flex !important; }
         <h3><span lang-en>Nankai University</span><span lang-zh>南开大学</span></h3>
         <div class="degree"><span lang-en>Master's, Software Engineering</span><span lang-zh>软件工程硕士</span></div>
         <div class="period"><span lang-en>Tianjin, China</span><span lang-zh>中国天津</span></div>
+        <div class="focus" style="margin-top:0.5rem;font-size:0.85rem;color:var(--text2);">
+          <span lang-en><strong>Focus:</strong> AI, Deep Learning, MLLMs</span>
+          <span lang-zh class="block"><strong>研究方向：</strong>人工智能、深度学习、多模态大语言模型</span>
+        </div>
+        <div class="thesis" style="font-size:0.85rem;color:var(--text2);">
+          <span lang-en><strong>Thesis:</strong> Speaking Habit Persistence Analysis for Identity Tracing in Face-Swapped Content Using MLLMs</span>
+          <span lang-zh class="block"><strong>论文：</strong>基于多模态大语言模型的面部替换内容身份追踪中的说话习惯持久性分析</span>
+        </div>
       </div>
     </div>
     <div class="edu-card">
@@ -988,7 +997,7 @@ body.zh [lang-zh].inline-flex { display: inline-flex !important; }
     <div class="award-icon">🏆</div>
     <div>
       <h3><span lang-en>MOFCOM Scholarship Award</span><span lang-zh>商务部奖学金</span></h3>
-      <p><span lang-en>Chinese Government Scholarship for Postgraduate Excellence at Nankai University. Awarded by the Ministry of Commerce of the People's Republic of China.</span><span lang-zh class="block">中华人民共和国商务部授予的南开大学研究生优秀奖学金。</span></p>
+      <p><span lang-en>Chinese Government Scholarship - Top graduate award</span><span lang-zh class="block">中国政府奖学金——优秀研究生奖</span></p>
     </div>
   </div>
 
@@ -1122,23 +1131,6 @@ body.zh [lang-zh].inline-flex { display: inline-flex !important; }
         <p><span lang-en>Tianjin, China </span><span lang-zh>中国天津 </span></p>
       </div>
     </div>
-   
-    <div class="conf-card">
-      <div class="conf-card-dot"></div>
-      <div>
-        <h4><span lang-en>China-Africa Media Symposium</span><span lang-zh>中非媒体研讨会</span></h4>
-        <span class="role"><span lang-en>Keynote Speaker</span><span lang-zh>主旨演讲者</span></span>
-        <p><span lang-en>Tianjin, China</span><span lang-zh>中国天津</span></p>
-      </div>
-    </div>
-    <div class="conf-card">
-      <div class="conf-card-dot"></div>
-      <div>
-        <h4><span lang-en>31st China Daily "21st Century Cup" English Speaking Competition</span><span lang-zh>第31届中国日报"21世纪杯"英语演讲比赛</span></h4>
-        <span class="role"><span lang-en>Social Media & Tech Moderator</span><span lang-zh>社交媒体与技术主持人</span></span>
-         <p><span lang-en>Tianjin, China</span><span lang-zh>中国天津</span></p>
-       </div>
-    </div>
     <div class="conf-card">
       <div class="conf-card-dot"></div>
       <div>
@@ -1150,12 +1142,30 @@ body.zh [lang-zh].inline-flex { display: inline-flex !important; }
     <div class="conf-card">
       <div class="conf-card-dot"></div>
       <div>
+        <h4><span lang-en>China-Africa Media Symposium</span><span lang-zh>中非媒体研讨会</span></h4>
+        <span class="role"><span lang-en>Keynote Speaker</span><span lang-zh>主旨演讲者</span></span>
+        <p><span lang-en>Tianjin, China</span><span lang-zh>中国天津</span></p>
+      </div>
+    </div>
+    <div class="conf-card">
+      <div class="conf-card-dot"></div>
+      <div>
         <h4><span lang-en>Wuhan Sanfran Electronics Tech Visit</span><span lang-zh>武汉三帆电子科技参观</span></h4>
         <span class="role"><span lang-en>Industry Visitor</span><span lang-zh>行业访客</span></span>
         <p><span lang-en>Latest tech builds & innovation</span><span lang-zh>最新技术构建与创新</span></p>
        <p><span lang-en>Wuhan, China</span><span lang-zh>中国武汉</span></p>
       </div>
     </div>
+    <div class="conf-card">
+      <div class="conf-card-dot"></div>
+      <div>
+        <h4><span lang-en>31st China Daily "21st Century Cup" English Speaking Competition</span><span lang-zh>第31届中国日报"21世纪杯"英语演讲比赛</span></h4>
+        <span class="role"><span lang-en>Social Media & Tech Moderator</span><span lang-zh>社交媒体与技术主持人</span></span>
+         <p><span lang-en>Tianjin, China</span><span lang-zh>中国天津</span></p>
+       </div>
+    </div>
+   
+    
   </div>
 </section>
 

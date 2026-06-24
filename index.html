@@ -565,6 +565,106 @@ nav {
   font-size: 1rem;
 }
 
+/* TESTIMONIALS */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.testimonial-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transform-style: preserve-3d;
+}
+.testimonial-card:hover {
+  border-color: var(--accent);
+  transform: rotateX(3deg) translateY(-5px);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.15);
+}
+.testimonial-quote {
+  font-size: 4rem;
+  color: var(--accent);
+  font-family: Georgia, serif;
+  line-height: 1;
+  margin-bottom: -1rem;
+  opacity: 0.5;
+}
+.testimonial-text {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--text2);
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+.testimonial-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+  background-size: cover;
+  background-position: center;
+}
+.testimonial-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+.testimonial-role {
+  font-size: 0.8rem;
+  color: var(--text3);
+}
+
+/* CLIENTS */
+.clients-section {
+  text-align: center;
+  padding: 3rem 0;
+  border-top: 1px solid var(--border);
+  margin-top: 2rem;
+}
+.clients-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text3);
+  margin-bottom: 1.5rem;
+}
+.clients-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  opacity: 0.6;
+}
+.client-logo {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text2);
+  padding: 0.75rem 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--card);
+}
+
 /* GALLERY */
 .gallery-grid {
   display: grid;
@@ -785,6 +885,7 @@ body.zh [lang-zh].inline-flex { display: inline-flex !important; }
     <li><a href="#teaching"><span lang-en>Teaching</span><span lang-zh>教学</span></a></li>
     <li><a href="#projects"><span lang-en>Projects</span><span lang-zh>项目</span></a></li>
     <li><a href="#conferences"><span lang-en>Events</span><span lang-zh>会议</span></a></li>
+    <li><a href="#testimonials"><span lang-en>Testimonials</span><span lang-zh>评价</span></a></li>
     <li><a href="#contact"><span lang-en>Contact</span><span lang-zh>联系</span></a></li>
   </ul>
   <div class="nav-controls">
@@ -816,8 +917,8 @@ body.zh [lang-zh].inline-flex { display: inline-flex !important; }
       <span lang-zh class="block">人工智能与软件工程师 · 技术顾问 · 机器学习工程师</span>
     </div>
     <p class="hero-bio">
-      <span lang-en>Tech Consultant, Software Engineer, and Machine Learning Engineer with a track record of delivering solutions that bridge innovation, business growth, and global impact. Specializing in Full-Stack Development, Computer Vision, and intelligent systems, from Nigeria to China and beyond.</span>
-      <span lang-zh class="block">技术顾问、软件工程师与机器学习工程师，致力于构建连接创新、商业增长与全球影响的解决方案。专注于全栈开发、计算机视觉与智能系统，从尼日利亚到中国，再到世界各地。</span>
+      <span lang-en>I help businesses scale faster with AI-powered software that reduces operational costs, automates repetitive tasks, and delivers measurable ROI. From concept to deployment, I build solutions that drive real business outcomes.</span>
+      <span lang-zh class="block">我帮助企业通过AI驱动的软件加速发展，降低运营成本，自动化重复性任务，并提供可衡量的投资回报。从概念到部署，我构建推动实际业务成果的解决方案。</span>
     </p>
     <div class="skill-tags">
       <span class="tag">Machine Learning</span>
@@ -831,12 +932,12 @@ body.zh [lang-zh].inline-flex { display: inline-flex !important; }
     </div>
     <div class="hero-cta">
       <a href="#contact" class="btn btn-primary">
-        <span lang-en>Get In Touch</span>
-        <span lang-zh class="block">联系我</span>
+        <span lang-en>Start a Project</span>
+        <span lang-zh class="block">开始项目</span>
       </a>
       <a href="#projects" class="btn btn-outline">
-        <span lang-en>View Projects</span>
-        <span lang-zh class="block">查看项目</span>
+        <span lang-en>View Case Studies</span>
+        <span lang-zh class="block">查看案例</span>
       </a>
     </div>
   </div>
@@ -1213,6 +1314,51 @@ body.zh [lang-zh].inline-flex { display: inline-flex !important; }
     <div class="gallery-item"><img src="gallery/1770948035902.jpg" alt="Gallery photo"/></div>
     <div class="gallery-item gallery-normal"><img src="gallery/1780125606655.jpg" alt="Gallery photo"/></div>
     <div class="gallery-item gallery-normal"><img src="gallery/1780125608751.jpg" alt="Gallery photo"/></div>
+  </div>
+</section>
+
+
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="section">
+  <div class="section-label"><span lang-en>TESTIMONIALS</span><span lang-zh>客户评价</span></div>
+  <h2 class="section-title"><span lang-en>What Clients Say</span><span lang-zh>客户评价</span></h2>
+  <div class="testimonials-grid">
+    <div class="testimonial-card">
+      <div class="testimonial-quote">"</div>
+      <p class="testimonial-text"><span lang-en>Emmanuel developed our company website and integrated advanced front-end architecture for SoilSmart. He implements user-centered solutions with strong problem-solving skills and attention to detail.</span><span lang-zh>埃马纽尔开发了我们的公司网站，并为SoilSmart集成了先进的前端架构。他实施以用户为中心的解决方案，具有强大的解决问题能力和注重细节的精神。</span></p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar" style="background-image: url('images/solutions.jpg'); background-size: cover; background-position: center;"></div>
+        <div>
+          <div class="testimonial-name">Solutions Inc Mw</div>
+          <div class="testimonial-role"><span lang-en>Software Development Agency</span><span lang-zh>软件开发机构</span></div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="testimonial-card">
+      <div class="testimonial-quote">"</div>
+      <p class="testimonial-text"><span lang-en>Emmanuel developed and implemented our organization's website, translating our vision into a professional platform. He integrates technical expertise with commitment to our mission.</span><span lang-zh>埃马纽尔开发并实施了我们组织的网站，将我们的愿景转化为专业平台。他将技术专长与对我们使命的承诺相结合。</span></p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar" style="background-image: url('images/reach.jpg'); background-size: cover; background-position: center;"></div>
+        <div>
+          <div class="testimonial-name">Reach Out to Girls</div>
+          <div class="testimonial-role"><span lang-en>Non-Profit Organization</span><span lang-zh>非营利组织</span></div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="testimonial-card">
+      <div class="testimonial-quote">"</div>
+      <p class="testimonial-text"><span lang-en>Emmanuel develops and enhances our website, improving functionality and user experience. He integrates technical precision with creative innovation in STEM education content.</span><span lang-zh>埃马纽尔开发和增强我们的网站，提高功能和用户体验。他将技术精度与STEM教育内容的创新相结合。</span></p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar" style="background-image: url('images/stem.jpg'); background-size: cover; background-position: center;"></div>
+        <div>
+          <div class="testimonial-name">Sarah Khudze</div>
+          <div class="testimonial-role"><span lang-en>Founder, STEM Voyagers | Mandela Washington Fellow</span><span lang-zh>STEM Voyagers创始人 | 曼德拉华盛顿研究员</span></div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 

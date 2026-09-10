@@ -568,7 +568,7 @@ nav {
 /* TESTIMONIALS */
 .testimonials-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.5rem;
   margin-top: 2rem;
 }
@@ -842,6 +842,7 @@ footer {
 /* MOBILE NAV */
 .hamburger { display: none; background: none; border: none; cursor: pointer; color: var(--text); font-size: 1.4rem; }
 @media (max-width: 900px) {
+  .testimonials-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .hero { grid-template-columns: 1fr; }
   .hero-photo-wrap { display: block; margin-top: 1.5rem; }
   .hero-photo-placeholder { width: 160px; height: 160px; }
@@ -850,6 +851,7 @@ footer {
   .hamburger { display: block; }
 }
 @media (max-width: 600px) {
+  .testimonials-grid { grid-template-columns: 1fr; }
   nav { padding: 0 1rem; }
   .hero { padding: 90px 1rem 60px; }
   .section { padding: 60px 1rem; }
@@ -1325,9 +1327,10 @@ body.zh [lang-zh].inline-flex { display: inline-flex !important; }
   <div class="section-label"><span lang-en>TESTIMONIALS</span><span lang-zh>客户评价</span></div>
   <h2 class="section-title"><span lang-en>What Clients Say</span><span lang-zh>客户评价</span></h2>
   <div class="testimonials-grid">
+    <!--
     <div class="testimonial-card">
       <div class="testimonial-quote">"</div>
-      <p class="testimonial-text"><span lang-en>Emmanuel developed our company website and integrated advanced front-end architecture for SoilSmart. He implements user-centered solutions with strong problem-solving skills and attention to detail.</span><span lang-zh>埃马纽尔开发了我们的公司网站，并为SoilSmart集成了先进的前端架构。他实施以用户为中心的解决方案，具有强大的解决问题能力和注重细节的精神。</span></p>
+      <p class="testimonial-text"><span lang-en>Our new SoilSmart website gave the business a clearer digital presence from day one. Emmanuel brought sharp technical judgment, thoughtful design, and an impressive ability to turn our needs into a polished, user-friendly result.</span><span lang-zh>我们新的SoilSmart网站从第一天起就让企业拥有了更清晰的数字形象。埃马纽尔展现了出色的技术判断力、周到的设计能力，以及将我们的需求转化为精致易用成果的能力。</span></p>
       <div class="testimonial-author">
         <div class="testimonial-avatar" style="background-image: url('images/solutions.jpg'); background-size: cover; background-position: center;"></div>
         <div>
@@ -1336,10 +1339,11 @@ body.zh [lang-zh].inline-flex { display: inline-flex !important; }
         </div>
       </div>
     </div>
+    -->
     
     <div class="testimonial-card">
       <div class="testimonial-quote">"</div>
-      <p class="testimonial-text"><span lang-en>Emmanuel developed and implemented our organization's website, translating our vision into a professional platform. He integrates technical expertise with commitment to our mission.</span><span lang-zh>埃马纽尔开发并实施了我们组织的网站，将我们的愿景转化为专业平台。他将技术专长与对我们使命的承诺相结合。</span></p>
+      <p class="testimonial-text"><span lang-en>What stood out was Emmanuel's patience with our mission and the people behind it. He listened carefully, asked the right questions, and built a professional platform that helps Reach Out to Girls communicate with confidence.</span><span lang-zh>埃马纽尔对我们的使命和团队成员展现出的耐心令人印象深刻。他认真倾听并提出恰当的问题，创建了一个帮助Reach Out to Girls自信沟通的专业平台。</span></p>
       <div class="testimonial-author">
         <div class="testimonial-avatar" style="background-image: url('images/reach.jpg'); background-size: cover; background-position: center;"></div>
         <div>
@@ -1351,12 +1355,24 @@ body.zh [lang-zh].inline-flex { display: inline-flex !important; }
     
     <div class="testimonial-card">
       <div class="testimonial-quote">"</div>
-      <p class="testimonial-text"><span lang-en>Emmanuel develops and enhances our website, improving functionality and user experience. He integrates technical precision with creative innovation in STEM education content.</span><span lang-zh>埃马纽尔开发和增强我们的网站，提高功能和用户体验。他将技术精度与STEM教育内容的创新相结合。</span></p>
+      <p class="testimonial-text"><span lang-en>Working with Emmanuel feels like adding both an engineer and a creative problem-solver to the team. He makes STEM content easier to explore, improves the experience with care, and brings fresh ideas to every iteration.</span><span lang-zh>与埃马纽尔合作就像团队中同时加入了一位工程师和富有创意的问题解决者。他让STEM内容更易于探索，细心改善用户体验，并在每次迭代中带来新想法。</span></p>
       <div class="testimonial-author">
         <div class="testimonial-avatar" style="background-image: url('images/stem.jpg'); background-size: cover; background-position: center;"></div>
         <div>
           <div class="testimonial-name">Sarah Khudze</div>
           <div class="testimonial-role"><span lang-en>Software Engineer | STEM Education Consultant</span><span lang-zh>软件工程师 | STEM教育顾问</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="testimonial-quote">"</div>
+      <p class="testimonial-text">Having studied alongside Emmanuel in China, I have seen his exceptional drive as a researcher and software architect. His work in AI safety, machine learning, and human-centered education reflects deep analytical rigor, technical excellence, and visionary leadership.</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar" style="background-image: url('images/Ti Nilar.jpg'); background-size: 165% auto; background-position: 50% 0%;"></div>
+        <div>
+          <div class="testimonial-name">Ti Nilar Thein</div>
+          <div class="testimonial-role">International Ph.D. Researcher in Applied Linguistics</div>
         </div>
       </div>
     </div>
@@ -1386,8 +1402,8 @@ body.zh [lang-zh].inline-flex { display: inline-flex !important; }
         <div class="contact-link-icon"><i class="fas fa-phone"></i></div>
         <div>
           <div style="font-weight:600; font-size:0.82rem; color:var(--text3);">Phone</div>
-          <div>+86 18 2025 61 437</div>
           <div>+234 813 130 9335</div>
+          <div>+86 18 2025 61 437</div>         
         </div>
       </div>
       <a href="https://www.linkedin.com/in/coachemmyb/" target="_blank" class="contact-link">
